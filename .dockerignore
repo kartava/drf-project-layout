@@ -1,0 +1,10 @@
+!.coveragerc
+.dockerignore
+.editorconfig
+.env
+.git
+.github
+.gitignore
+CHANGELOG.md
+Dockerfile
+docker-compose.yml

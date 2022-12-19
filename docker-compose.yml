@@ -1,0 +1,25 @@
+version: '3'
+services:
+  postgres:
+    container_name: payments-db
+    restart: on-failure
+    image: postgres:14.4
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+  api:
+    container_name: payments-api
+    restart: always
+    build: ./
+    command: >
+      bash -c "./manage.py migrate &&
+               ./manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
