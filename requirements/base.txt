@@ -6,6 +6,9 @@ gunicorn==20.1.0
 whitenoise==6.2.0
 python-dotenv==0.21.0
 django-cors-headers==3.13.0
+djangorestframework==3.14.0
+Markdown==3.4.1  # Markdown support for the browsable API.
+django-filter==22.1  # Filtering support
 
 # For the persistence stores
 psycopg2-binary==2.9.5
