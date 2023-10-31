@@ -2,7 +2,7 @@ import os
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-from .base import *  # noqa
+from .base import *
 
 DEBUG = False
 CSRF_COOKIE_SECURE = True

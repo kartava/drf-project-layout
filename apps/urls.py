@@ -23,18 +23,12 @@ from drf_yasg import openapi
 
 
 schema_view = get_schema_view(
-    openapi.Info(
-        title="Project API",
-        default_version="v1",
-    ),
-    public=True,
+    openapi.Info(title="Project API", default_version="v1"), public=True
 )
 
 admin.site.site_header = "Project Administration"
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-]
+urlpatterns = [path("admin/", admin.site.urls)]
 
 if settings.DEBUG:
     urlpatterns += (

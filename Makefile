@@ -85,13 +85,13 @@ help:
 
 # Linters & tests
 
-## Formats code with `black`. | Linters
+## Formats code with `ruff`. | Linters
 black:
-	@docker-compose run --rm $(BACKEND_SERVICE) black $(APPS_FOLDER_NAME)
+	@docker-compose run --rm $(BACKEND_SERVICE) ruff format $(APPS_FOLDER_NAME)
 
-## Formats code with `flake8`.
+## Formats code with `ruff`.
 lint:
-	@docker-compose run --rm $(BACKEND_SERVICE) flake8 $(APPS_FOLDER_NAME)
+	@docker-compose run --rm $(BACKEND_SERVICE) ruff check $(APPS_FOLDER_NAME)
 
 # Database
 

@@ -1,4 +1,4 @@
-from .base import *  # noqa
+from .base import *
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
